@@ -138,14 +138,14 @@ export default routes;
   </n-button>
 </template>
 <script lang="ts">
-  import { usepermissions } from '@/hooks/web/usepermissions';
+  import { usePermission } from '@/hooks/web/usePermission';
   import { RoleEnum } from '@/enums/roleEnum';
 
   export default defineComponent({
     setup() {
-      const { haspermissions } = usepermissions();
+      const { hasPermission } = usePermission();
 
-      return { haspermissions, RoleEnum };
+      return { hasPermission, RoleEnum };
     },
   });
 </script>
